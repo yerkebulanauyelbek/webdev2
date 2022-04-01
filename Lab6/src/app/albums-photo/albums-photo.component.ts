@@ -38,4 +38,11 @@ export class AlbumsPhotoComponent implements OnInit {
   goBack(){
     this.location.back();
   }
+
+  sortAcs(){
+    this.photos.sort((a, b)=>a.title > b.title ? 1 : -1 );
+  }
+  sortDesc(){
+    this.photos.sort((a, b)=>a.title > b.title ? -1 : 1 );
+  }
 }

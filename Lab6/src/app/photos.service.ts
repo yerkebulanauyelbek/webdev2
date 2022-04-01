@@ -20,4 +20,7 @@ export class PhotosService {
   getPhoto(albumId: number): Observable<Photos[]>{
     return this.client.get<Photos[]>(`${this.BASE_URL}/${albumId}/photos`);
   }
+  sortAcs(photoTitle:string): Observable<Photos[]>{
+    return this.client.get<Photos[]>(`${this.BASE_URL}/${photoTitle}/photos`);
+  }
 }

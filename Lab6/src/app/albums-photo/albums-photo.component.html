@@ -1,13 +1,14 @@
 <ul *ngIf="loaded">
-  <h4>Photos</h4>
+  <h2>Photos</h2>
   <button (click)="goBack()">Go Back</button>
+  <button (click)="sortAcs()">Asc</button>
+  <button (click)="sortDesc()">Desc</button>
   <li *ngFor="let photos of photos">
-    <a [routerLink]="['/albums/{{albumId}}/photos', photos.albumId]"><p>AlbumId: {{photos.albumId}}</p></a>
-    <a [routerLink]="['/albums/{{id}}/photos', photos.id]"><p>Id: {{photos.id}}</p></a>
-    <a [routerLink]="['/albums/{{title}}/photos', photos.title]"><p>Title: {{photos.title}}</p></a>
-    <a [routerLink]="['/albums/{{url}}/photos', photos.url]"><img src="{{photos.url}}" alt=""></a><br>
-    <a [routerLink]="['/albums/{{thumbnailUrl}}/photos', photos.thumbnailUrl]"><img src="{{photos.thumbnailUrl}}" alt=""></a>
+    <p>AlbumId: {{photos.albumId}}</p>
+    <p>Id: {{photos.id}}</p>
+    <p>Title: {{photos.title}}</p>
+    <p><img alt="" src="{{photos.thumbnailUrl}}"></p>
+    <p><img alt="" src="{{photos.url}}"></p>
   </li>
 </ul>
-
 <p *ngIf="!loaded">Loading photos...</p>
