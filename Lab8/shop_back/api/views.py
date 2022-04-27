@@ -38,3 +38,5 @@ def Sorted_Products(request, category_id):
     except Category.DoesNotExist as e:
         return JsonResponse({'message'}, str(e), status=400)
     return JsonResponse(products_json, safe=False)
+
+

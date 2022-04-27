@@ -40,9 +40,9 @@ export class AlbumsPhotoComponent implements OnInit {
   }
 
   sortAcs(){
-    this.photos.sort((a, b)=>a.title > b.title ? 1 : -1 );
+    this.photos.sort((a, b)=>a.id > b.id ? 1 : -1 );
   }
   sortDesc(){
-    this.photos.sort((a, b)=>a.title > b.title ? -1 : 1 );
+    this.photos.sort((a, b)=>a.id > b.id ? -1 : 1 );
   }
 }
